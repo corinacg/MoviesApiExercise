@@ -32,6 +32,7 @@ namespace Movies.WebApi
             services.AddDbContext<MoviesContext>(options => options.UseSqlite(Configuration.GetConnectionString("MoviesSqliteConnection")));
             services.AddScoped<IMoviesRespository, MoviesRepository>();
             services.AddScoped<MoviesSearchService>();
+            services.AddScoped<UserRatingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

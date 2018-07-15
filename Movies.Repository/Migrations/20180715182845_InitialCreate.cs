@@ -63,52 +63,52 @@ namespace Movies.Repository.Migrations
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 1, 27, 2003, 178, "Dogville" });
+                values: new object[] { 1, 8448, 2003, 178, "Dogville" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 2, 23, 2017, 100, "A Dog's Purpose" });
+                values: new object[] { 2, 8326, 2017, 100, "A Dog's Purpose" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 3, 19, 2002, 109, "The Emperor's Club" });
+                values: new object[] { 3, 8192, 2002, 109, "The Emperor's Club" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 4, 19, 2016, 128, "La La Land" });
+                values: new object[] { 4, 73730, 2016, 128, "La La Land" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 5, 31, 2017, 123, "The Shape of Water" });
+                values: new object[] { 5, 8832, 2017, 123, "The Shape of Water" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 6, 31, 2001, 104, "The Others" });
+                values: new object[] { 6, 5136, 2001, 104, "The Others" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 7, 23, 2004, 101, "The Machinist" });
+                values: new object[] { 7, 12288, 2004, 101, "The Machinist" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 8, 15, 2017, 141, "Wonder Woman" });
+                values: new object[] { 8, 641, 2017, 141, "Wonder Woman" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 9, 15, 2005, 157, "Harry Potter and the Goblet of Fire" });
+                values: new object[] { 9, 644, 2005, 157, "Harry Potter and the Goblet of Fire" });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "Genre", "ReleaseYear", "RunningTime", "Title" },
-                values: new object[] { 10, 19, 2001, 135, "A Beautiful Mind" });
+                values: new object[] { 10, 24576, 2001, 135, "A Beautiful Mind" });
 
             migrationBuilder.InsertData(
                 table: "Users",

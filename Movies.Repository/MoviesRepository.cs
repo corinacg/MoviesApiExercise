@@ -26,5 +26,20 @@ namespace Movies.Repository
          {
              return moviesContext.Users;
          }
+
+         public void AddOrUpdateUserRating(UserRating rating)
+         {
+             var userRating = moviesContext.UserRatings.Where(ur => ur.UserId == rating.UserId && ur.MovieId == rating.MovieId).FirstOrDefault();
+             if(userRating == null)
+             {
+                  moviesContext.UserRatings.Add(rating);
+             }
+             else
+             {
+                 userRating.Rating = rating.Rating;
+             }
+
+             moviesContext.SaveChanges();
+         }
     }
 }

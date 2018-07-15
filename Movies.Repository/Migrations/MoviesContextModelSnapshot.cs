@@ -34,16 +34,16 @@ namespace Movies.Repository.Migrations
                     b.ToTable("Movies");
 
                     b.HasData(
-                        new { Id = 1, Genre = 27, ReleaseYear = 2003, RunningTime = 178, Title = "Dogville" },
-                        new { Id = 2, Genre = 23, ReleaseYear = 2017, RunningTime = 100, Title = "A Dog's Purpose" },
-                        new { Id = 3, Genre = 19, ReleaseYear = 2002, RunningTime = 109, Title = "The Emperor's Club" },
-                        new { Id = 4, Genre = 19, ReleaseYear = 2016, RunningTime = 128, Title = "La La Land" },
-                        new { Id = 5, Genre = 31, ReleaseYear = 2017, RunningTime = 123, Title = "The Shape of Water" },
-                        new { Id = 6, Genre = 31, ReleaseYear = 2001, RunningTime = 104, Title = "The Others" },
-                        new { Id = 7, Genre = 23, ReleaseYear = 2004, RunningTime = 101, Title = "The Machinist" },
-                        new { Id = 8, Genre = 15, ReleaseYear = 2017, RunningTime = 141, Title = "Wonder Woman" },
-                        new { Id = 9, Genre = 15, ReleaseYear = 2005, RunningTime = 157, Title = "Harry Potter and the Goblet of Fire" },
-                        new { Id = 10, Genre = 19, ReleaseYear = 2001, RunningTime = 135, Title = "A Beautiful Mind" }
+                        new { Id = 1, Genre = 8448, ReleaseYear = 2003, RunningTime = 178, Title = "Dogville" },
+                        new { Id = 2, Genre = 8326, ReleaseYear = 2017, RunningTime = 100, Title = "A Dog's Purpose" },
+                        new { Id = 3, Genre = 8192, ReleaseYear = 2002, RunningTime = 109, Title = "The Emperor's Club" },
+                        new { Id = 4, Genre = 73730, ReleaseYear = 2016, RunningTime = 128, Title = "La La Land" },
+                        new { Id = 5, Genre = 8832, ReleaseYear = 2017, RunningTime = 123, Title = "The Shape of Water" },
+                        new { Id = 6, Genre = 5136, ReleaseYear = 2001, RunningTime = 104, Title = "The Others" },
+                        new { Id = 7, Genre = 12288, ReleaseYear = 2004, RunningTime = 101, Title = "The Machinist" },
+                        new { Id = 8, Genre = 641, ReleaseYear = 2017, RunningTime = 141, Title = "Wonder Woman" },
+                        new { Id = 9, Genre = 644, ReleaseYear = 2005, RunningTime = 157, Title = "Harry Potter and the Goblet of Fire" },
+                        new { Id = 10, Genre = 24576, ReleaseYear = 2001, RunningTime = 135, Title = "A Beautiful Mind" }
                     );
                 });
 

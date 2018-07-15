@@ -2,7 +2,7 @@
 
 namespace Movies.Services
 {
-    public class InvalidInputException: System.Exception
+    public class InvalidInputException : System.Exception
     {
          public InvalidInputException() :base()
         {

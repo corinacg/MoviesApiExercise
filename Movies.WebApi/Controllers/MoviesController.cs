@@ -19,17 +19,23 @@ namespace Movies.WebApi.Controllers
         {
           this.searchService = searchService;
         }
-        // GET api/values
+
         [HttpGet]
         public ActionResult<IEnumerable<MovieResult>> Get([FromQuery]MovieFilter filter)
         {
+            try
+            {
                 var movies = searchService.SearchMoviesByFilter(filter);
                 if(movies.Any() == false)
                 {
                      return NotFound("Movies not found");
                 }
                 return movies;
-           
+            }
+            catch (Movies.Services.InvalidInputException)
+            {
+                return BadRequest();
+            }
         }
     }
 }
