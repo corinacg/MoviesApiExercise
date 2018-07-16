@@ -18,3 +18,4 @@ Apis:
  - Maybe add some integration tests
  - Improve query performance - maybe use denormalization and add pre-computed average rating on Movie
  - Add more validation and error handling
+ - Remove hardcoded value 5 from MoviesSearchService and add it to configuration
