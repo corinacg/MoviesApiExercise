@@ -21,9 +21,18 @@ namespace Movies.WebApi.Controllers
         }
       
         [HttpPost]
-        public void Post([FromBody] UserRatingInput rating)
+        public IActionResult Post([FromBody] UserRatingInput rating)
         {
-            userRatingService.AddOrUpdateUserRating(rating);
+            try
+            {
+                 userRatingService.AddOrUpdateUserRating(rating);
+                 return Ok();
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+           
         }
     }
 }

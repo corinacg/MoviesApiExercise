@@ -54,7 +54,7 @@ namespace Movies.Services
                             AverageRating = g.Average(x => x.Rating)}).ToList();
             foreach (var movie in movies)
             {
-                movie.AverageRating =  RoundingUtils.RoundToNearestDot5(moviesRatings.SingleOrDefault(r=> r.MovieId == movie.Id).AverageRating);
+                movie.AverageRating =  RoundingUtils.RoundToNearestDot5(moviesRatings.SingleOrDefault(r=> r.MovieId == movie.Id)?.AverageRating);
             }
 
             return movies;
@@ -83,7 +83,7 @@ namespace Movies.Services
            var moviesIds = moviesRepository.GetUserRatings().Where(ur=> ur.UserId == userId)
            .OrderByDescending(ur => ur.Rating).ThenBy(ur => ur.Movie.Title).Take(5).Select(ur => ur.MovieId).ToArray();
 
-           System.Console.WriteLine($"best movie {moviesIds.First()}");
+       //    System.Console.WriteLine($"best movie {moviesIds.First()}  {moviesIds.Skip(1).First()}  {moviesIds.Skip(2).First()}  {moviesIds.Skip(3).First()} {moviesIds.Skip(4).First()}");
 
            var movies = moviesRepository.GetUserRatings().Where(ur => moviesIds.Contains(ur.MovieId))
               .GroupBy(ur=> new {ur.MovieId, ur.Movie.Title, ur.Movie.ReleaseYear, ur.Movie.RunningTime})
@@ -93,6 +93,7 @@ namespace Movies.Services
                             ReleaseYear = g.Key.ReleaseYear,
                             RunningTime = g.Key.RunningTime,
                             AverageRating = g.Average(x => x.Rating)}).ToList();
+            movies = movies.OrderBy(m=> Array.IndexOf(moviesIds, m.Id)).ToList();
 
             foreach (var movie in movies)
             {

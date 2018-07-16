@@ -16,6 +16,18 @@ namespace Movies.Services
 
         public void AddOrUpdateUserRating(UserRatingInput userRating)
         {
+          var movieExists = moviesRepository.GetMovies().Any(m=> m.Id== userRating.MovieId);
+          if(movieExists == false)
+          {
+            throw new NotFoundException("Invalid movie");
+          }
+
+          var userExists = moviesRepository.GetUsers().Any(u=> u.Id== userRating.UserId);
+          if(userExists == false)
+          {
+            throw new NotFoundException("Invalid user");
+          }
+
           moviesRepository.AddOrUpdateUserRating(
             new UserRating(){
               UserId = userRating.UserId,
