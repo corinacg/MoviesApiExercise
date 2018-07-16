@@ -6,12 +6,12 @@ namespace Movies.Services.Models
 {
     public class MovieFilter
     {
-        public MovieFilter ()
+        public MovieFilter()
         {
-          Genres = new List<Genre>();
+            Genres = new List<Genre>();
         }
         public string Title { get; set; }
-        public int? ReleaseYear {get; set;}
+        public int? ReleaseYear { get; set; }
         public List<Genre> Genres { get; set; }
     }
 }

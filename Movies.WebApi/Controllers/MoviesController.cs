@@ -15,9 +15,9 @@ namespace Movies.WebApi.Controllers
     public class MoviesController : ControllerBase
     {
         private MoviesSearchService searchService;
-        public MoviesController (MoviesSearchService searchService)
+        public MoviesController(MoviesSearchService searchService)
         {
-          this.searchService = searchService;
+            this.searchService = searchService;
         }
 
         [HttpGet]
@@ -26,9 +26,9 @@ namespace Movies.WebApi.Controllers
             try
             {
                 var movies = searchService.SearchMoviesByFilter(filter);
-                if(movies.Any() == false)
+                if (movies.Any() == false)
                 {
-                     return NotFound("Movies not found");
+                    return NotFound("Movies not found");
                 }
                 return movies;
             }

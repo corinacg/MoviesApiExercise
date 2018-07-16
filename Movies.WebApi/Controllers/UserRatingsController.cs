@@ -15,24 +15,23 @@ namespace Movies.WebApi.Controllers
     public class UserRatingsController : ControllerBase
     {
         private UserRatingService userRatingService;
-        public UserRatingsController (UserRatingService userRatingService)
+        public UserRatingsController(UserRatingService userRatingService)
         {
-          this.userRatingService = userRatingService;
+            this.userRatingService = userRatingService;
         }
-      
+
         [HttpPost]
         public IActionResult Post([FromBody] UserRatingInput rating)
         {
             try
             {
-                 userRatingService.AddOrUpdateUserRating(rating);
-                 return Ok();
+                userRatingService.AddOrUpdateUserRating(rating);
+                return Ok();
             }
             catch (NotFoundException ex)
             {
                 return NotFound(ex.Message);
             }
-           
         }
     }
 }

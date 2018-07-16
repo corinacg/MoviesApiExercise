@@ -15,31 +15,31 @@ namespace Movies.WebApi.Controllers
     public class TopMoviesController : ControllerBase
     {
         private MoviesSearchService searchService;
-        public TopMoviesController (MoviesSearchService searchService)
+        public TopMoviesController(MoviesSearchService searchService)
         {
-          this.searchService = searchService;
+            this.searchService = searchService;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<MovieResult>> Get()
         {
             var movies = searchService.SearchTopMoviesByTotalAverageRating();
-             if(movies.Any() == false)
-             {
-                 return NotFound("Movies not found");
-             }
-             return movies;
+            if (movies.Any() == false)
+            {
+                return NotFound("Movies not found");
+            }
+            return movies;
         }
 
         [HttpGet("{userId}")]
         public ActionResult<IEnumerable<MovieResult>> Get(int userId)
         {
             var movies = searchService.SearchTopMoviesByUserRating(userId);
-             if(movies.Any() == false)
-             {
-                 return NotFound("Movies not found");
-             }
-             return movies;
+            if (movies.Any() == false)
+            {
+                return NotFound("Movies not found");
+            }
+            return movies;
         }
     }
 }

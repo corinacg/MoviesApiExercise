@@ -9,7 +9,6 @@ namespace Movies.Services
         IQueryable<Movie> GetMovies();
         IQueryable<UserRating> GetUserRatings();
         IQueryable<User> GetUsers();
-
         void AddOrUpdateUserRating(UserRating rating);
     }
 }
