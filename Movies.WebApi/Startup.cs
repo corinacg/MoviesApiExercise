@@ -47,7 +47,6 @@ namespace Movies.WebApi
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
